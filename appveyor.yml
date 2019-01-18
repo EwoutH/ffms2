@@ -10,7 +10,7 @@ before_build:
     cmake c:\projects\ffms2
 
 build:
-  project: c:\projects\ffms2\build-msvc\ffms2.sln
+  project: c:\projects\ffms2\build-msvc\ffms2.vcxproj
 
 artifacts:
  - path: \**\ffms2.exe
