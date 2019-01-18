@@ -1,0 +1,17 @@
+image: Visual Studio 2017
+configuration: Release
+
+before_build:
+- cmd: |-
+    cd %APPVEYOR_BUILD_FOLDER%
+    mkdir cmake_build
+    cd cmake_build
+    cmake --version
+    cmake c:\projects\ffms2
+
+build:
+  project: c:\projects\ffms2\build-msvc\ffms2.sln
+
+artifacts:
+ - path: \**\ffms2.exe
+   name: ffms2-x86_64
